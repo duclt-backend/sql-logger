@@ -1,0 +1,54 @@
+{
+    "name": "core-packages/sql-logger",
+    "description": "Log SQL queries for Laravel/Lumen framework",
+    "keywords": ["laravel", "sql", "log", "logger", "lumen", "sql logger", "log sql queries", "log sql", "sql log"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "duclt3005",
+            "email": "duclt3005t@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.*|6.*|7.*|8.*",
+        "mnabialek/laravel-version": "^1.0.3",
+        "nesbot/carbon": "~1.0 || ^2.0",
+        "illuminate/filesystem": "5.*|6.*|7.*|8.*",
+        "illuminate/container": "5.*|6.*|7.*|8.*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.5",
+        "phpunit/phpunit": "^6.5",
+        "mockery/mockery": "^1.0",
+        "php-coveralls/php-coveralls": "^2.0",
+        "laravel/framework": "6.*|7.*|8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Workable\\SqlLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workable\\SqlLogger\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workable\\SqlLogger\\Providers\\SqlLoggerServiceProvider"
+            ]
+        },
+        "thanks": {
+            "name": "mnabialek/laravel-version",
+            "url": "https://github.com/mnabialek/laravel-version"
+        },
+        "suggest": {
+            "symfony/thanks": "Star packages you use running 'composer thanks' command"
+        }
+    }
+}
